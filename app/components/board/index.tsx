@@ -1,58 +1,58 @@
-import NewColForm from "../forms/new-col-form/index";
-import { mockCols } from "./mock-data";
+import NewColForm from '../forms/new-col-form/index';
+import { mockCols } from './mock-data';
 
 const Board = () => {
   // When page loads it should get the latest data from db
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-6">
-      <div className="max-w-7xl mx-auto">
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-6'>
+      <div className='mx-auto max-w-7xl'>
         {/* Board Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        <div className='mb-8'>
+          <h1 className='mb-2 text-3xl font-bold text-gray-900'>
             Project Board
           </h1>
-          <p className="text-gray-600">Manage your columns and tasks</p>
+          <p className='text-gray-600'>Manage your columns and tasks</p>
         </div>
 
         {/* Columns Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+        <div className='mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {mockCols.map((col) => (
             <div
               key={col.id}
-              className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200"
+              className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md'
             >
-              <h3 className="font-semibold text-gray-900 text-lg mb-2">
+              <h3 className='mb-2 text-lg font-semibold text-gray-900'>
                 {col.name}
               </h3>
-              <div className="text-sm text-gray-500">0 tasks</div>
+              <div className='text-sm text-gray-500'>0 tasks</div>
               {/* Placeholder for future task content */}
-              <div className="mt-4 space-y-2">
-                <div className="h-2 bg-gray-100 rounded w-full"></div>
-                <div className="h-2 bg-gray-100 rounded w-3/4"></div>
+              <div className='mt-4 space-y-2'>
+                <div className='h-2 w-full rounded bg-gray-100'></div>
+                <div className='h-2 w-3/4 rounded bg-gray-100'></div>
               </div>
             </div>
           ))}
 
           {/* New Column Form Card */}
-          <div className="bg-white rounded-xl shadow-sm border-2 border-dashed border-gray-300 p-6 hover:border-blue-400 transition-colors duration-200">
-            <div className="text-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div className='rounded-xl border-2 border-dashed border-gray-300 bg-white p-6 shadow-sm transition-colors duration-200 hover:border-blue-400'>
+            <div className='mb-4 text-center'>
+              <div className='mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100'>
                 <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  className='h-6 w-6 text-blue-600'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
                     strokeWidth={2}
-                    d="M12 4v16m8-8H4"
+                    d='M12 4v16m8-8H4'
                   />
                 </svg>
               </div>
-              <h3 className="font-medium text-gray-900 mb-1">Add New Column</h3>
-              <p className="text-sm text-gray-500 mb-4">
+              <h3 className='mb-1 font-medium text-gray-900'>Add New Column</h3>
+              <p className='mb-4 text-sm text-gray-500'>
                 Create a new column for your board
               </p>
             </div>

@@ -1,134 +1,134 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Nav = () => {
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+    <nav className='border-b border-gray-200 bg-white shadow-sm'>
+      <div className='mx-auto max-w-7xl px-6'>
+        <div className='flex h-16 items-center justify-between'>
           {/* Logo/Brand */}
-          <div className="flex items-center">
+          <div className='flex items-center'>
             <Link
-              href="/"
-              className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+              href='/'
+              className='flex items-center space-x-2 transition-opacity hover:opacity-80'
             >
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className='flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600'>
                 <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  className='h-5 w-5 text-white'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
                     strokeWidth={2}
-                    d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 002-2M9 7a2 2 0 012 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012-2"
+                    d='M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 002-2M9 7a2 2 0 012 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012-2'
                   />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-gray-900">BoardFlow</span>
+              <span className='text-xl font-bold text-gray-900'>BoardFlow</span>
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className='hidden items-center space-x-8 md:flex'>
             <Link
-              href="/dashboard"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              href='/dashboard'
+              className='font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600'
             >
               Dashboard
             </Link>
             <Link
-              href="/boards"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              href='/boards'
+              className='font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600'
             >
               Boards
             </Link>
             <Link
-              href="/projects"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              href='/projects'
+              className='font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600'
             >
               Projects
             </Link>
             <Link
-              href="/settings"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              href='/settings'
+              className='font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600'
             >
               Settings
             </Link>
           </div>
 
           {/* Right side - User menu */}
-          <div className="flex items-center space-x-4">
+          <div className='flex items-center space-x-4'>
             {/* Notifications */}
-            <button className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative">
+            <button className='relative rounded-lg p-2 text-gray-500 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-700'>
               <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+                className='h-5 w-5'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                   strokeWidth={2}
-                  d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+                  d='M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z'
                 />
               </svg>
               {/* Notification badge */}
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              <span className='absolute -top-1 -right-1 h-3 w-3 rounded-full bg-red-500'></span>
             </button>
 
             {/* User Avatar */}
-            <div className="relative">
-              <button className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-                <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+            <div className='relative'>
+              <button className='flex items-center space-x-2 rounded-lg p-2 transition-colors duration-200 hover:bg-gray-100'>
+                <div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-300'>
                   <svg
-                    className="w-5 h-5 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    className='h-5 w-5 text-gray-600'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
                       strokeWidth={2}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
                     />
                   </svg>
                 </div>
-                <span className="hidden sm:block text-sm font-medium text-gray-700">
+                <span className='hidden text-sm font-medium text-gray-700 sm:block'>
                   John Doe
                 </span>
                 <svg
-                  className="w-4 h-4 text-gray-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  className='h-4 w-4 text-gray-500'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
                     strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
+                    d='M19 9l-7 7-7-7'
                   />
                 </svg>
               </button>
             </div>
 
             {/* Mobile menu button */}
-            <button className="md:hidden p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <button className='rounded-lg p-2 text-gray-500 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-700 md:hidden'>
               <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+                className='h-6 w-6'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                   strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d='M4 6h16M4 12h16M4 18h16'
                 />
               </svg>
             </button>
@@ -137,29 +137,29 @@ const Nav = () => {
       </div>
 
       {/* Mobile menu (hidden by default) */}
-      <div className="md:hidden border-t border-gray-200 bg-gray-50">
-        <div className="px-6 py-4 space-y-2">
+      <div className='border-t border-gray-200 bg-gray-50 md:hidden'>
+        <div className='space-y-2 px-6 py-4'>
           <Link
-            href="/dashboard"
-            className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-white rounded-md font-medium transition-colors duration-200"
+            href='/dashboard'
+            className='block rounded-md px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:bg-white hover:text-blue-600'
           >
             Dashboard
           </Link>
           <Link
-            href="/boards"
-            className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-white rounded-md font-medium transition-colors duration-200"
+            href='/boards'
+            className='block rounded-md px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:bg-white hover:text-blue-600'
           >
             Boards
           </Link>
           <Link
-            href="/projects"
-            className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-white rounded-md font-medium transition-colors duration-200"
+            href='/projects'
+            className='block rounded-md px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:bg-white hover:text-blue-600'
           >
             Projects
           </Link>
           <Link
-            href="/settings"
-            className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-white rounded-md font-medium transition-colors duration-200"
+            href='/settings'
+            className='block rounded-md px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:bg-white hover:text-blue-600'
           >
             Settings
           </Link>
