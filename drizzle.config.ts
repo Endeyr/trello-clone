@@ -5,7 +5,7 @@ export default defineConfig({
   dialect: 'singlestore',
   out: './drizzle',
   schema: './server/db/schema.ts',
-  tablesFilter: ['drive_tutorial_*'],
+  tablesFilter: ['trello-clone_*'],
   dbCredentials: {
     host: process.env.SINGLESTORE_HOST || '',
     port: parseInt(process.env.SINGLESTORE_PORT || '0000'),
