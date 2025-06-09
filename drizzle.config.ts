@@ -8,7 +8,7 @@ export default defineConfig({
   tablesFilter: ['drive_tutorial_*'],
   dbCredentials: {
     host: process.env.SINGLESTORE_HOST || '',
-    port: parseInt(process.env.SINGLESTORE_PORT) || 0,
+    port: parseInt(process.env.SINGLESTORE_PORT || '0000'),
     user: process.env.SINGLESTORE_USER || '',
     password: process.env.SINGLESTORE_PASS || '',
     database: process.env.SINGLESTORE_DB_NAME || '',
