@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@next/env": "^15.3.3",
     "babel-plugin-react-compiler": "19.1.0-rc.2",
     "drizzle-orm": "^0.44.2",
     "mysql2": "^3.14.1",
